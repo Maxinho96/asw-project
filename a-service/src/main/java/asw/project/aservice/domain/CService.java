@@ -4,6 +4,6 @@ public interface CService {
 	
 	public void saveAnimal(String name);
 	
-	public String getAnimal();
+	public String getAnimals();
 
 }

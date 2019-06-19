@@ -1,8 +1,8 @@
-# application.yml 
+# application.yml
 --- 
 spring: 
   application: 
-    name: aservice
+    name: cservice
 eureka: 
   client: 
     serviceUrl: 
@@ -13,5 +13,3 @@ eureka:
       instanceId: ${spring.application.name}:${random.value}
 server: 
   port: ${PORT:${SERVER_PORT:0}}
-
-animals: Orso, Lupo, Cane, Gatto, Coniglio

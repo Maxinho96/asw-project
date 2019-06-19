@@ -1,26 +1,26 @@
-package asw.project.aservice.rest;
+package asw.project.cservice.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import asw.project.aservice.domain.AService;
+import asw.project.cservice.domain.CService;
 
 @RestController
-public class AController {
+public class CController {
 	
-	@Autowired 
-	private AService aService;
-
+	@Autowired
+	private CService cService;
+	
 	@RequestMapping(value="/", method=RequestMethod.POST)
-	public void saveAnimal() {
-		this.aService.saveAnimal();
+	public void saveAnimal(String name) {
+		this.cService.saveAnimal(name);
 	}
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String getAnimal() {
-		return this.aService.getAnimals();
+	public String getAnimals() {
+		return this.cService.getAnimals();
 	}
 
 }

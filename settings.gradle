@@ -4,13 +4,13 @@
 	}
 }*/
 include 'a-service'
-//include 'c-service'
+include 'c-service'
 include 'eureka-server'
 include 'zuul-gateway'
 
 rootProject.name = 'asw-project'
 
 project(':a-service').name = 'aservice'
-//project(':c-service').name = 'cservice'
+project(':c-service').name = 'cservice'
 project(':eureka-server').name = 'eureka'
 project(':zuul-gateway').name = 'zuul'

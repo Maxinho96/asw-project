@@ -12,11 +12,11 @@ public class AnimalsService implements CService {
 	private AnimalsClient animalsClient;
 	
 	public void saveAnimal(String name) {
-		animalsClient.saveAnimal(name);
+		this.animalsClient.saveAnimal(name);
 	}
 	
-	public String getAnimal() {
-		return animalsClient.getAnimals(); 
+	public String getAnimals() {
+		return this.animalsClient.getAnimals(); 
 	}
 	
 }

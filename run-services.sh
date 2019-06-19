@@ -10,9 +10,9 @@ java -Xms64m -Xmx128m -jar eureka-server/build/libs/eureka.jar &
 echo Starting A Service
 java -Xms64m -Xmx128m -jar a-service/build/libs/aservice.jar &
 
-# echo Starting Sentence C Service
+echo Starting C Service
 
-# java -Xms64m -Xmx128m -jar sentence-service/build/libs/cservice.jar &
+java -Xms64m -Xmx128m -jar c-service/build/libs/cservice.jar &
 
 echo Starting Zuul Gateway
 

@@ -9,26 +9,29 @@ import org.springframework.stereotype.Service;
 @Service
 public class AService {
 	
-	private String[] animals = {"Orso", "Lupo", "Cane", "Gatto", "Coniglio"};
-	
 	@Autowired 
 	private CService animalsService;
 	
 	@Value("${eureka.instance.metadataMap.instanceId}")
 	String instanceId;
 	
+	@Value("${animals}")
+	private String animals;
+	
 	public void saveAnimal() {
 		String name = this.instanceId + ": " + this.getRandomAnimal();
+		//System.out.println(name);
 		this.animalsService.saveAnimal(name);
 	}
 	
-	public String getAnimal() {
-		return this.animalsService.getAnimal();
+	public String getAnimals() {
+		return this.animalsService.getAnimals();
 	}
 
 	private String getRandomAnimal() {
-		int rnd = new Random().nextInt(this.animals.length);
-		return animals[rnd];
+		String[] animalsArray = this.animals.split(",");
+		int rnd = new Random().nextInt(animalsArray.length);
+		return animalsArray[rnd];
 	}
 
 }
