@@ -20,7 +20,6 @@ public class AService {
 	
 	public void saveAnimal() {
 		String name = this.instanceId + ": " + this.getRandomAnimal();
-		//System.out.println(name);
 		this.animalsService.saveAnimal(name);
 	}
 	
