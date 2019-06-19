@@ -12,25 +12,37 @@ public class AService {
 	@Autowired 
 	private CService animalsService;
 	
-	@Value("${eureka.instance.metadataMap.instanceId}")
-	String instanceId;
+	//@Value("${eureka.instance.metadataMap.instanceId}")
+	//String instanceId;
 	
 	@Value("${animals}")
-	private String animals;
+	private String[] animals;
+	
+	@Value("${names}")
+	private String[] names;
+	
+	private String instanceName;
 	
 	public void saveAnimal() {
-		String name = this.instanceId + ": " + this.getRandomAnimal();
+		String name = this.getInstanceName() + ":" + this.getRandomAnimal();
 		this.animalsService.saveAnimal(name);
 	}
-	
+
 	public String getAnimals() {
 		return this.animalsService.getAnimals();
 	}
 
 	private String getRandomAnimal() {
-		String[] animalsArray = this.animals.split(",");
-		int rnd = new Random().nextInt(animalsArray.length);
-		return animalsArray[rnd];
+		int rnd = new Random().nextInt(this.animals.length);
+		return this.animals[rnd];
+	}
+	
+	private String getInstanceName() {
+		if(this.instanceName == null) {
+			int rnd = new Random().nextInt(this.names.length);
+			this.instanceName = this.names[rnd];
+		}
+		return this.instanceName;
 	}
 
 }

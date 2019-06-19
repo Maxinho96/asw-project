@@ -13,3 +13,5 @@ eureka:
       instanceId: ${spring.application.name}:${random.value}
 server: 
   port: ${PORT:${SERVER_PORT:0}}
+
+names: Alice, Carlo, Alberto, Max, Marco
