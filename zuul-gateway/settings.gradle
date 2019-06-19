@@ -1,5 +1,5 @@
-pluginManagement {
+/*pluginManagement {
 	repositories {
 		gradlePluginPortal()
 	}
-}
+}*/

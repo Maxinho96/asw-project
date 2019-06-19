@@ -1,8 +1,8 @@
-pluginManagement {
+/*pluginManagement {
 	repositories {
 		gradlePluginPortal()
 	}
-}
+}*/
 include 'a-service'
 //include 'c-service'
 include 'eureka-server'

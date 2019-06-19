@@ -20,7 +20,8 @@ public class AController {
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String getAnimal() {
-		return this.aService.getAnimal();
+		return "Prova";
+		//return this.aService.getAnimal();
 	}
 
 }
