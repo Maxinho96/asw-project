@@ -5,15 +5,15 @@
 echo Running application
 
 echo Starting Eureka Server  
-java -Xms64m -Xmx128m -jar eureka-server/build/libs/eureka-server.jar &
+java -Xms64m -Xmx128m -jar eureka-server/build/libs/eureka.jar &
 
 echo Starting A Service
-java -Xms64m -Xmx128m -jar a-service/build/libs/a-service.jar &
+java -Xms64m -Xmx128m -jar a-service/build/libs/aservice.jar &
 
-# echo Starting Sentence B Service
+# echo Starting Sentence C Service
 
-# java -Xms64m -Xmx128m -jar sentence-service/build/libs/b-service.jar &
+# java -Xms64m -Xmx128m -jar sentence-service/build/libs/cservice.jar &
 
 echo Starting Zuul Gateway
 
-java -Xms64m -Xmx128m -jar zuul-gateway/build/libs/zuul-gateway.jar &
+java -Xms64m -Xmx128m -jar zuul-gateway/build/libs/zuul.jar &

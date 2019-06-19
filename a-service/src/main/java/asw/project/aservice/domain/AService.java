@@ -12,7 +12,7 @@ public class AService {
 	private String[] animals = {"Orso", "Lupo", "Cane", "Gatto", "Coniglio"};
 	
 	@Autowired 
-	private BService animalsService;
+	private CService animalsService;
 	
 	@Value("${eureka.instance.metadataMap.instanceId}")
 	String instanceId;

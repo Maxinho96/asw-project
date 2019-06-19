@@ -1,6 +1,6 @@
 package asw.project.aservice.domain;
 
-public interface BService {
+public interface CService {
 	
 	public void saveAnimal(String name);
 	

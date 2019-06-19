@@ -1,12 +1,12 @@
-package asw.project.aservice.bservice;
+package asw.project.aservice.cservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import asw.project.aservice.domain.BService;
+import asw.project.aservice.domain.CService;
 
 @Service
-public class AnimalsService implements BService {
+public class AnimalsService implements CService {
 	
 	@Autowired 
 	private AnimalsClient animalsClient;

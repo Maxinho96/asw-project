@@ -1,10 +1,10 @@
-package asw.project.aservice.bservice;
+package asw.project.aservice.cservice;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient("bservice")
+@FeignClient("cservice")
 public interface AnimalsClient {
 	
 	@RequestMapping(value="/", method=RequestMethod.POST)
