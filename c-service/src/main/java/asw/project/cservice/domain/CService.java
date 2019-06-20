@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class CService {
 	
-	@Value("${eureka.instance.metadataMap.instanceId}")
-	String instanceId;
+	//@Value("${eureka.instance.metadataMap.instanceId}")
+	//String instanceId;
 	
 	@Value("${names}")
 	private String[] names;
