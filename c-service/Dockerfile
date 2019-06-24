@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y curl
 
 ADD build/libs/cservice.jar cservice.jar
 
-EXPOSE 8080
+# EXPOSE 8080
 
 ENTRYPOINT ["java", "-Xmx128m", "-Xms128m", "-jar", "cservice.jar"]
 

@@ -12,6 +12,7 @@ eureka:
     metadataMap: 
       instanceId: ${spring.application.name}:${random.value}
 server: 
-  port: 8080
+  port: ${PORT:${SERVER_PORT:0}}
+  #8080
 
-names: Alice, Carlo, Alberto, Max, Marco
+names: Mario, Luigi, Yoshi, Peach, Wario
