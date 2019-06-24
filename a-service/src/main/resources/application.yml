@@ -6,13 +6,14 @@ spring:
 eureka: 
   client: 
     serviceUrl: 
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka:8761/eureka/
   instance: 
     leaseRenewalIntervalInSeconds: 10
     metadataMap: 
       instanceId: ${spring.application.name}:${random.value}
 server: 
   port: ${PORT:${SERVER_PORT:0}}
+  #8080
 
 names: Alice, Carlo, Alberto, Max, Marco
 animals: Orso, Lupo, Cane, Gatto, Coniglio
