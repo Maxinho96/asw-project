@@ -42,7 +42,7 @@ services:
     environment:
       KAFKA_ADVERTISED_HOST_NAME: ${DOCKER_HOST_IP:-10.11.1.111}
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "asw.kafka.channel.alpha:1:1"
+      KAFKA_CREATE_TOPICS: "asw.kafka.channel.alpha:4:1"
       #,asw.kafka.channel.beta:4:1,asw.kafka.channel.gamma:4:1"
 #      KAFKA_CREATE_TOPICS: "consumer-service-channel:1:1,restaurant-service-channel:1:1,order-service-channel:1:1"
 #      # HOSTNAME_COMMAND: "docker info | grep ^Name: | cut -d' ' -f 2"
