@@ -11,6 +11,11 @@ services:
       context: ./a-service
     depends_on:
       - "eureka"
+  bservice:
+    build: 
+      context: ./b-service
+    depends_on:
+      - "eureka"
   cservice:
     build: 
       context: ./c-service

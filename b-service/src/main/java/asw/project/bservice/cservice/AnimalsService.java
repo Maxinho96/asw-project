@@ -1,9 +1,9 @@
-package asw.project.aservice.cservice;
+package asw.project.bservice.cservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import asw.project.aservice.domain.CService;
+import asw.project.bservice.domain.CService;
 
 @Service
 public class AnimalsService implements CService {
@@ -11,12 +11,8 @@ public class AnimalsService implements CService {
 	@Autowired 
 	private AnimalsClient animalsClient;
 	
-	/*B//public void saveAnimal(String name) {
+	public void saveAnimal(String name) {
 		this.animalsClient.saveAnimal(name);
-	}*/
-	
-	public String getAnimals() {
-		return this.animalsClient.getAnimals(); 
 	}
 	
 }

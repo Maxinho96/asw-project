@@ -1,4 +1,4 @@
-package asw.project.aservice.domain;
+package asw.project.bservice.domain;
 
 import java.util.Random;
 
@@ -7,37 +7,26 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AService {
+public class BService {
 	
 	@Autowired 
 	private CService animalsService;
 	
-	@Autowired
-	private SimpleMessagePublisher simpleMessagePublisher;
-	
 	//@Value("${eureka.instance.metadataMap.instanceId}")
 	//String instanceId;
-	
-	@Value("${animals}")
-	private String[] animals;
 	
 	@Value("${names}")
 	private String[] names;
 	
 	private String instanceName;
 	
-	public void saveAnimal() {
-		String message = this.getInstanceName() + ":" + this.getRandomAnimal();
-		simpleMessagePublisher.publish(message);
+    public void onMessage(String message) {
+		this.saveAnimal(message);
 	}
-
-	public String getAnimals() {
-		return this.animalsService.getAnimals();
-	}
-
-	private String getRandomAnimal() {
-		int rnd = new Random().nextInt(this.animals.length);
-		return this.animals[rnd];
+    
+	public void saveAnimal(String message) {
+		String name = this.getInstanceName() + ":" + message;
+		this.animalsService.saveAnimal(name);
 	}
 	
 	private String getInstanceName() {

@@ -4,6 +4,7 @@
 	}
 }*/
 include 'a-service'
+include 'b-service'
 include 'c-service'
 include 'eureka-server'
 include 'zuul-gateway'
@@ -11,6 +12,7 @@ include 'zuul-gateway'
 rootProject.name = 'asw-project'
 
 project(':a-service').name = 'aservice'
+project(':b-service').name = 'bservice'
 project(':c-service').name = 'cservice'
 project(':eureka-server').name = 'eureka'
 project(':zuul-gateway').name = 'zuul'
