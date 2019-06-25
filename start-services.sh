@@ -11,10 +11,9 @@ if [ -z "$DOCKER_HOST_IP" ] ; then
     export DOCKER_HOST_IP=${MY_IP_ADDR}
 fi
 
-# Script per avviare Kafka con Docker Compose
+# Script per avviare i servizi con Docker Compose
 
-echo Starting Kafka...
+echo Starting Services...
 
 # docker-compose up -d zookeeper kafka
-#docker-compose up
-docker-compose up --scale aservice=4 --scale bservice=4 --scale cservice=4
+docker-compose up
