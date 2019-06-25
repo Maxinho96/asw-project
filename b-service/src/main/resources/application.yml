@@ -31,4 +31,5 @@ eureka:
 server: 
   port: ${PORT:${SERVER_PORT:0}}
   #8080    
+  
 names: Azzonzo, Azzeni, Ascanio, Ariel, Afaccrucazz
