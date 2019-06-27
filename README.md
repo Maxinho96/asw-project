@@ -35,5 +35,4 @@ Project for the software architectures class, Roma Tre University.
 ```   
     ./run-curl-client.sh <requests_number> <sleep_time>
 ```
-   if requests_number is 0, the client will do infinite requests
-   sleep_time is the sleep time between two requests (in seconds)
+   if requests_number is 0, the client will do infinite requests, sleep_time is the sleep time between two requests (in seconds)
