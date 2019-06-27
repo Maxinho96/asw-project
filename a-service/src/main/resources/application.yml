@@ -3,7 +3,6 @@
 
 # MESSAGING 
 asw.kafka.channel.out: asw.kafka.channel.alpha
-# asw.kafka.groupid=simple-producer
 
 spring: 
   application: 
@@ -23,7 +22,6 @@ eureka:
       instanceId: ${spring.application.name}:${random.value}
 server: 
   port: ${PORT:${SERVER_PORT:0}}
-  #8080
 
 names: Alice, Carlo, Alberto, Max, Marco
 animals: Orso, Lupo, Cane, Gatto, Coniglio

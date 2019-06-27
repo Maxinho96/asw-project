@@ -1,7 +1,6 @@
 buildscript {
 	ext {
 		springBootVersion = '2.1.5.RELEASE'
-//		springCloudVersion = 'Finchley.SR3'
 		springCloudVersion = 'Greenwich.SR1'
 	}
 	repositories {
@@ -18,8 +17,6 @@ buildscript {
 subprojects {
 
 	apply plugin: 'java'
-	// apply plugin: 'org.springframework.boot'
-	// apply plugin: 'io.spring.dependency-management'
 
 	group = 'asw.project'
 	sourceCompatibility = '1.8'
@@ -32,25 +29,3 @@ subprojects {
 	}
 
 }
-
-/*plugins {
-	id 'org.springframework.boot' version '2.1.5.RELEASE'
-	id 'java'
-}
-
-apply plugin: 'io.spring.dependency-management'
-
-group = 'asw.project'
-//version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
-
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}*/
-
-

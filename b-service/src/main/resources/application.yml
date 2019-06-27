@@ -14,12 +14,8 @@ spring:
       bootstrap-servers: ${DOCKER_HOST_IP:10.11.1.111}:9092
       group-id: ${asw.kafka.groupid}
       auto-offset-reset: earliest
-      # auto-offset-reset: latest
-      # key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      # value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      #CISTAVA properties.spring.json.trusted.packages: *
 eureka: 
   client: 
     serviceUrl: 
@@ -29,7 +25,6 @@ eureka:
     metadataMap: 
       instanceId: ${spring.application.name}:${random.value}
 server: 
-  port: ${PORT:${SERVER_PORT:0}}
-  #8080    
+  port: ${PORT:${SERVER_PORT:0}}  
   
 names: Azzonzo, Azzeni, Ascanio, Ariel, Afaccrucazz
